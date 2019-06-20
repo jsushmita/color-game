@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="menu">
+				<h1>Color Game</h1>
+				<h3>How To Play</h3>
+				
+				<h4>Let's start playing</h4>
+				<input type="text" name="name" id="nameNew" placeholder="Enter your name" required>
+				<button id="new">Play</button>
+				<br><br>
+				<!-- <h4>Join an existing game</h4>
+				<input type="text" name="name" id="nameJoin" placeholder="Enter your name" required>
+				<input type="text" name="room" id="room" placeholder="Enter Game ID" required>
+				<button id="join" style="display: none;">Join Game</button> -->
+			</div>
+			<div class="gameBoard" style="display: none;">
+				<h2 id="userHello"></h2>
+                <h3 id="turn"></h3>
+                <h3 id="score"></h3>
+                <h3 id="oppScore"></h3>
+				<table class="center">
+					<tr>
+						<td><button class="tile" id="button_0"></button></td>
+						<td><button class="tile" id="button_1"></button></td>
+						<td><button class="tile" id="button_2"></button></td>
+						<td><button class="tile" id="button_3"></button></td>
+						<td><button class="tile" id="button_4"></button></td>
+						<td><button class="tile" id="button_5"></button></td>
+						<td><button class="tile" id="button_6"></button></td>
+						<td><button class="tile" id="button_7"></button></td>
+						<td><button class="tile" id="button_8"></button></td>
+						<td><button class="tile" id="button_9"></button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
