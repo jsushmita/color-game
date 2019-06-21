@@ -2,8 +2,8 @@
 
 To run this application, use the following commands
 
-'''npm install'''
+``` npm install ``` 
 
-'''npm start'''
+``` npm start ```
 
 The application runs on http://localhost:5000/ in browser
