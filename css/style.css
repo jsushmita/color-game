@@ -1,0 +1,234 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+body {
+  background: #fff;
+  font-family: 'Indie Flower'; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1 {
+  font-family: "Rock Salt", sans-serif;
+  line-height: 0.7;
+  margin: 0 auto;
+  text-align: left;
+  width: 1.875em; }
+
+.button {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  padding: 1.25em 3em;
+  text-decoration: none;
+  -webkit-transition: 0.25s ease;
+  transition: 0.25s ease; }
+  .button:hover {
+    color: #000; }
+
+.screen {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%; }
+  .screen header {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%); }
+  .screen h1 {
+    color: rgb(214, 44, 129); }
+  .screen-start {
+    /* background: #54D17A; } */
+    background-image: url("start.png"); }
+    .screen-start h1 {
+      font-size: 6em; }
+    .screen-start .button {
+      color: rgb(143, 175, 152); }
+    .screen-start h1 + .button {
+      margin-top: 5em; }
+  .screen-win p {
+    font-size: 6em;
+    font-weight: 700;
+    color: #fff;
+    position: relative; }
+    .screen-win p:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      color: #000;
+      font-size: 4em;
+      font-weight: 400;
+      line-height: 0;
+      z-index: -1; }
+  .screen-win-tie {
+    background: #54D17A; }   
+  .screen-win-one {
+    background: rgb(187, 255, 0); }
+    .screen-win-one .button {
+      color: rgb(187, 255, 0); }
+    .screen-win-one p:before {
+      /*content: url(../img/o.svg);*/
+      content: "o";
+      top: 1.75rem; }
+  .screen-win-two {
+    background: rgb(136, 20, 130); }
+    .screen-win-two .button {
+      color: rgb(136, 20, 130); }
+    .screen-win-two p:before {
+      content: "×";
+      top: 4.5rem; }
+
+.board {
+  background-image: url("bg.jpg");
+  height: 642px; 
+  padding-top: 1em; }
+  .board h1 {
+    margin-top: 0.3em; }
+
+.players {
+  color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  top: 1rem;
+  width: 35%;
+  padding: 1.25em 0 1em;
+  outline: 1px solid #ccc;
+  transition: 1s; }
+  .players svg g {
+    fill: rgba(0, 0, 0, 0.25); }
+  .players:first-child {
+    left: 2.5%; }
+  .players:last-child {
+    right: 2.5%; }
+  .players-turn {
+    outline: none;
+  }
+  #player1.active svg g, #player2.active svg g {
+    fill: #fff; }
+
+  #player1.players,
+  #player2.players
+   {
+    color: #c0c0c0;
+    font-size: 1.15em;
+  }
+  
+  #player1.active.players,
+  #player2.active.players
+   {
+    color: #fff;
+  }
+
+  #player1.active {
+    background: #FFA000; }
+  #player2.active {
+    background: #3688C3; }
+
+.boxes {
+  /* width: 480px; */
+  margin: 3em auto 0; }
+  .boxes .box {
+    background: #EFEFEF;
+    border-radius: 4px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 1.75em;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s ease; 
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    display: inline;
+    background-position: center center;
+      margin-right: 0; }
+    .boxes .box-filled-1 {
+      background-color: #FFA000;
+      background-image: url(../img/o.svg); }
+    .boxes .box-filled-2 {
+      background-color: #3688C3;
+      background-image: url(../img/x.svg); }
+/*     .boxes .box-filled-1:hover,
+     .boxes .box-filled-2:hover { background-color: #efefef; }*/
+
+
+/* Animate box background color - hover effect is handled with JS - background color is light grey on hover */
+
+.future-cop {
+  position: relative;
+  margin-top: 123px;
+  margin-left: 257px;
+    padding-bottom: 100px;
+}
+
+.future {
+  position: absolute;
+  left: 48px;
+    top: -363px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 200px;
+  margin-top: 160px;
+  margin-bottom: 0;
+  color: #96F5FC;
+    -webkit-text-fill-color: rgba(90, 253, 230, 1);
+  text-shadow: -2px -2px 0 #FFBAF2;
+  font-weight: normal;
+  z-index: 2;
+  margin-left: 60px;
+  padding-left: 50px;
+  padding-right: 70px;
+}
+
+.cop {
+  position: relative;
+  font-family: 'Monoton', cursive;
+  font-size: 200px;
+  line-height: 1;
+  margin: 0;
+  margin-top: -59px;
+    padding-left: 167px;
+  /* font-weight: normal; */
+}
+
+.mac .cop {
+  font-weight: 400;
+}
+
+.play-header {
+  position: absolute;
+  left: 48px;
+  top: -363px;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 99px;
+  margin-top: 338px;
+  margin-bottom: 0;
+  color: #96F5FC;
+  -webkit-text-fill-color: rgba(90, 253, 230, 1);
+  text-shadow: -2px -2px 0 #FFBAF2;
+  font-weight: normal;
+  z-index: 2;
+  margin-left: 128px;
+  padding-left: 50px;
+  padding-right: 70px;
+}
+
+.turn{
+      font-family: 'Pacifico';
+      font-size: 30px;
+      text-align: center;
+}
